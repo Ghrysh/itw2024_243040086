@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basic layouting</title>
+</head>
+<style>
+    body {
+        height: 2000px;
+    }
+    h1 {
+        color: royalblue;
+        font-family: arial;
+        font-size: 50px;
+        background-color: lightblue;
+    }
+    a {
+        color: red;
+        background-color: pink;
+        /* untuk menghilangkan garis di bawah text */
+        text-decoration: dotted;
+        font-family: arial;
+        width: 80px;
+        /* height disini untuk mengubah ukuran block */
+        height: 40px;
+        /* menggeser text agar berada di tengah secara horizontal */
+        text-align: center;
+        /* line dan line height harus satu ukuran agar text berada di tengah */
+        line-height: 40px;
+        /* untuk mengubah display menjadi inline atau block */
+        display: inline-block;
+    }
+    p span {
+        background-color: lightblue;
+    }
+
+    h3 span {
+        background-color: red;
+    }
+
+    h4 {
+        background-color: royalblue;
+        width: 200px;
+        height: 100px;
+    }
+
+    .kotak2 {
+        background-color: salmon;
+        width: 200px;
+        height: 250px;
+        /* overflow : melebihi kapasitas frame, dibuat auto agar menyesuaikan */
+        overflow: auto;
+    }
+
+    /* saat kursor mengarah pada text akan berubah */
+    a:hover {
+        background-color: black;
+        color: white;
+    }
+
+    /* agar text yang di klik berubah warna */
+    a:active {
+        background-color: red;
+    }
+
+    .nav {
+        /* item jadi flexibel untuk digeser */
+        display: flex;
+        /* ganti posisi */
+        justify-content: space-around;
+        /* jarak antara item */
+        gap: 20px;
+    }
+
+</style>
+<body>
+    <h1>Hello World!</h1>
+    <div class="nav">
+    <a href="#">hello</a>
+    <a href="#">hello</a>
+    <a href="#">hello</a>
+    </div>
+
+    <h3>Judul <span class="s1">Artikel</span></h3>
+
+    <!-- dibuat span agar bisa dipanggil ke css dan diubah warnanya -->
+     <!-- span (inline) div (block) -->
+    <p>Lorem, ipsum dolor sit amet <span class="s2">consectetur</span> adipisicing elit. Saepe nulla quia vitae, magnam sequi fuga velit laborum, ipsa cupiditate quibusdam nisi natus assumenda pariatur illum facilis magni quisquam quo excepturi!</p>
+
+    <h4>Kotak</h4>
+
+    <!-- dibuat div agar text berada di bawah -->
+    <div class="kotak2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, laboriosam fugiat distinctio recusandae quasi provident. Voluptatum eveniet iure harum, reprehenderit vitae blanditiis nulla asperiores corrupti ea beatae iste commodi minima veniam amet corporis dolorum a tenetur maiores rem, placeat voluptate possimus. Ad non iusto molestias alias rerum deserunt quas commodi id facilis officiis nemo nostrum voluptas, similique quis in quam! Voluptatum vero delectus voluptatem quis praesentium, neque impedit explicabo minus nihil saepe enim recusandae corrupti tempora aliquam ad dolorem quaerat asperiores? Eligendi natus, odit consequuntur quibusdam deserunt minima, neque culpa, nisi aliquam illum cumque cum rerum iure maxime labore totam!</div>
+</body>
+</html>
